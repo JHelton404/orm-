@@ -19,10 +19,10 @@ Category.hasMany(Product), {
 // Products belongToMany Tags (through ProductTag)
 Product.belongsToMany(Tag), {
   foreignKey: 'product_id',
-  through: {
     model: ProductTag,
     unique: false
   },
+
   onDelete: 'CASCADE'
 }
 
